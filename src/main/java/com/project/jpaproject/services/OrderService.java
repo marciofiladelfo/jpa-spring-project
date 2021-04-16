@@ -13,14 +13,14 @@ import com.project.jpaproject.repositories.OrderRepository;
 public class OrderService  {
 	
 	@Autowired
-	private OrderRepository userRepository;
+	private OrderRepository repository;
 	
 	public List<Order> findAll(){
-		return userRepository.findAll();
+		return repository.findAll();
 	}
 	
 	public Order findById(Long id) {
-		Optional<Order> obj = userRepository.findById(id);
+		Optional<Order> obj = repository.findById(id);
 		return obj.get();
 	}
 }
